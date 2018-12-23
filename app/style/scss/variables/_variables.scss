@@ -1,0 +1,248 @@
+@import "colors";
+
+.o-loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  font-size: 0;
+  color: #fff;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .6s cubic-bezier(.25, .46, .45, .94), visibility 0s
+}
+
+.o-loader:before {
+  height: 100%;
+  content: ""
+}
+
+.o-loader:before,
+.o-loader>* {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.o-loader>* {
+  font-size: 1rem
+}
+
+.has-dom-loaded .o-loader {
+  visibility: hidden;
+  transition-delay: .9s, 1s;
+  opacity: 0
+}
+
+[data-template^=dashboard] .o-loader {
+  overflow: hidden;
+  left: 30%;
+  border-left: 1px solid #5f6065
+}
+
+[data-template^=dashboard] .o-loader .o-line {
+  display: none
+}
+
+@media (max-width:999px) {
+  [data-template^=dashboard] .o-loader {
+    left: 0
+  }
+}
+
+.o-loader_grid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0
+}
+
+.o-loader_grid:after,
+.o-loader_grid:before,
+.o-loader_grid div {
+  background-color: #3a3c44;
+  transform-origin: center bottom;
+  transform: scaleY(1);
+  transition: transform .9s cubic-bezier(.4, 0, 0, 1)
+}
+
+.has-dom-loaded .o-loader_grid:after,
+.has-dom-loaded .o-loader_grid:before,
+.has-dom-loaded .o-loader_grid div {
+  transform: scaleY(0)
+}
+
+[data-template^=dashboard] .o-loader_grid:after,
+[data-template^=dashboard] .o-loader_grid:before,
+[data-template^=dashboard] .o-loader_grid div {
+  background-color: #2a2b31
+}
+
+.o-loader_grid div {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 9rem;
+  right: 9rem;
+  transition-delay: .2s
+}
+
+@media (max-width:699px) {
+  .o-loader_grid div {
+    left: 33.33333%;
+    right: 33.33333%
+  }
+}
+
+.o-loader_grid:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 9rem;
+  transition-delay: .1s
+}
+
+@media (max-width:699px) {
+  .o-loader_grid:before {
+    width: 33.33333%
+  }
+}
+
+.o-loader_grid:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 9rem;
+  transition-delay: .3s
+}
+
+@media (max-width:699px) {
+  .o-loader_grid:after {
+    width: 33.33333%
+  }
+}
+
+.o-loader_logo {
+  position: relative;
+  width: 9.1875rem;
+  height: 9.1875rem;
+  padding-top: .9375rem;
+  overflow: visible;
+  transition: opacity .6s cubic-bezier(.25, .46, .45, .94), transform .6s cubic-bezier(.25, .46, .45, .94)
+}
+
+.has-dom-loaded .o-loader_logo,
+.has-dom-loading .o-loader_logo {
+  opacity: 0;
+  transform: translateY(60px)
+}
+
+.o-loader_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: .875rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 12.5rem;
+  margin-top: -1.4375rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s cubic-bezier(.25, .46, .45, .94) 1s, transform .6s cubic-bezier(.25, .46, .45, .94) 1s
+}
+
+.has-dom-first-loading .o-loader_text {
+  opacity: 1;
+  transform: none
+}
+
+.has-dom-loaded .o-loader_text {
+  opacity: 0;
+  transform: translateY(60px);
+  transition-delay: 0s
+}
+
+@media (max-width:699px) {
+  .o-loader_text {
+    display: none
+  }
+}
+
+[data-template^=dashboard] .o-loader_text {
+  display: none
+}
+
+.o-loader_circle {
+  position: absolute;
+  top: 9rem;
+  left: 9rem;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: opacity .3s cubic-bezier(.25, .46, .45, .94)
+}
+
+.has-dom-loaded .o-loader_circle {
+  opacity: 0;
+  transition-delay: .3s
+}
+
+.has-promo .o-loader_circle {
+  top: 11.25rem
+}
+
+[data-template^=dashboard] .o-loader_circle {
+  display: none
+}
+
+#o-loader_o {
+  transform: translateY(2.5625rem)
+}
+
+.has-dom-first-loading #o-loader_o {
+  transform: none
+}
+
+.o-loader_logo_base {
+  width: 6.6875rem;
+  height: 6.6875rem
+}
+
+.o-loader_logo_base path {
+  transform: translateY(-2.5625rem);
+  transition: transform .6s cubic-bezier(.4, 0, 0, 1) .8s
+}
+
+.has-dom-first-loading .o-loader_logo_base path:not(#o-loader_o) {
+  transform: none
+}
+
+@keyframes a {
+  to {
+    stroke-dashoffset: 420
+  }
+}
+
+.o-loader_logo_border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0
+}
+
+.o-loader_logo_border path {
+  fill: none;
+  stroke-width: 2px;
+  stroke: #fff;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: a 1.4s cubic-bezier(.835, .005, 0, 1) forwards .2s
+}
