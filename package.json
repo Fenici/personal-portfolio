@@ -35,7 +35,8 @@
     }
   },
   "dependencies": {
-    "gul": "^1.0.0"
+    "gul": "^1.0.0",
+    "semantic-ui": "^2.4.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.0",
