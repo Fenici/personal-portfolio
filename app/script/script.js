@@ -1,5 +1,7 @@
 (function ($) {
   'use strict';
+
+  // isotope
   $('.portfolio-block, .menu-item').on('click', function () {
     // Portfolio masonry
     var $container = $('#portfolio-container');
