@@ -1,0 +1,36 @@
+{
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 2,
+
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "prettier.disableLanguages": ["js"],
+  "files.autoSave": "onFocusChange",
+
+  "javascript.format.enable": false,
+  "prettier.singleQuote": true,
+  "prettier.eslintIntegration": true,
+  "prettier.tabWidth": 2,
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": true,
+  "editor.fontSize": 10,
+  "git.autofetch": true,
+  "terminal.integrated.rendererType": "dom",
+  "powermode.enableShake": false,
+  "workbench.editor.showIcons": false,
+  "material-icon-theme.activeIconPack": "react",
+  "powermode.enableExplosions": false,
+  "prettier.jsxBracketSameLine": true,
+  "files.associations": {
+    "*.js": "javascript"
+  }
+}
